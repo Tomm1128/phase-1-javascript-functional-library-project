@@ -17,3 +17,13 @@ const myEach = (collection, callback) => {
 
   return collection
 }
+
+const myMap = (collection, callback) => {
+  const data = convertToArray(collection)
+  let newArray = []
+  for (const element of data){
+    newArray.push(callback(element))
+  }
+
+  return newArray
+}
