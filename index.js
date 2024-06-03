@@ -42,3 +42,23 @@ const myReduce = (collection, callback, acc) => {
 
   return acc
 }
+
+const myFind = (collection, predicate) => {
+  const data = convertToArray(collection)
+  for (const element of data){
+    if (predicate(element)){
+      return element
+    }
+  }
+}
+
+const myFilter = (collection, predicate) => {
+  const data = convertToArray(collection)
+  let filterArray = []
+  for (const element of data){
+    if (predicate(element)){
+      filterArray.push(element)
+    }
+  }
+  return filterArray
+}
