@@ -62,3 +62,12 @@ const myFilter = (collection, predicate) => {
   }
   return filterArray
 }
+
+const mySize = (collection) => {
+  const data = convertToArray(collection)
+  let count = 0
+  for (const element of data){
+    count++
+  }
+  return count
+}
