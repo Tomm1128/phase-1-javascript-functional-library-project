@@ -27,3 +27,18 @@ const myMap = (collection, callback) => {
 
   return newArray
 }
+
+const myReduce = (collection, callback, acc) => {
+  const data = convertToArray(collection)
+
+  for (const element of data){
+    if (acc === undefined){
+      acc = element
+    }
+    else {
+      acc = callback(acc, element, collection)
+    }
+  }
+
+  return acc
+}
