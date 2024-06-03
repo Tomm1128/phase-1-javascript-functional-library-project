@@ -107,9 +107,19 @@ const myLast = (array, int) => {
 }
 
 const myKeys = (obj) => {
-  return Object.keys(obj)
+  let array = []
+  for (const item in obj){
+    array.push(item)
+  }
+  return array
 }
 
+myKeys(dataObject)
+
 const myValues = (obj) => {
-  return Object.values(obj)
+  let array = []
+  for (const item in obj){
+    array.push(obj[item])
+  }
+  return array
 }
