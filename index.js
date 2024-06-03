@@ -105,3 +105,11 @@ const myLast = (array, int) => {
     }
   }
 }
+
+const myKeys = (obj) => {
+  return Object.keys(obj)
+}
+
+const myValues = (obj) => {
+  return Object.values(obj)
+}
