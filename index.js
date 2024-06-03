@@ -71,3 +71,37 @@ const mySize = (collection) => {
   }
   return count
 }
+
+const myFirst = (array, int) => {
+  let newArray = []
+  if (int === undefined){
+    return array[0]
+  } else {
+    for (const element of array){
+      if(int === 0){
+        return newArray
+      } else {
+        newArray.push(element)
+        int--
+      }
+    }
+  }
+}
+
+const myLast = (array, int) => {
+  let newArray = []
+  const reversedArray = array.slice().reverse()
+
+  if (int === undefined){
+    return reversedArray[0]
+  } else {
+    for (const element of reversedArray){
+      if(int === 0){
+        return newArray.reverse()
+      } else {
+        newArray.push(element)
+        int--
+      }
+    }
+  }
+}
