@@ -8,3 +8,12 @@ const convertToArray = (data) => {
   }
   return newArray
 }
+const myEach = (collection, callback) => {
+  const data = convertToArray(collection)
+
+  for (const element of data){
+    callback(element)
+  }
+
+  return collection
+}
